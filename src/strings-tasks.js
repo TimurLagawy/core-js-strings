@@ -41,8 +41,12 @@ function getStringLength(value) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  let res = false;
+  if (typeof value === 'string') {
+    res = true;
+  }
+  return res;
 }
 
 /**
@@ -57,8 +61,12 @@ function isString(/* value */) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2) {
+  let res = value1;
+  for (let i = 0; i < value2.length; i += 1) {
+    res += value2[i];
+  }
+  return res;
 }
 
 /**
@@ -72,8 +80,8 @@ function concatenateStrings(/* value1, value2 */) {
  *   getFirstChar('cat') => 'c'
  *   getFirstChar('') => ''
  */
-function getFirstChar(/* value */) {
-  throw new Error('Not implemented');
+function getFirstChar(value) {
+  return value[0];
 }
 
 /**
@@ -117,8 +125,16 @@ function removeLeadingWhitespaces(/* value */) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeTrailingWhitespaces(value) {
+  let res = '';
+  if (value[value.length - 1] === ' ') {
+    for (let i = 0; i < value.length - 1; i += 1) {
+      res += value[i];
+    }
+  } else {
+    res = value;
+  }
+  return res;
 }
 
 /**
@@ -134,8 +150,14 @@ function removeTrailingWhitespaces(/* value */) {
  *   repeatString('', 3) => ''
  *   repeatString('abc', -2) => ''
  */
-function repeatString(/* str, times */) {
-  throw new Error('Not implemented');
+function repeatString(str, times) {
+  let res = '';
+  if (times > 0) {
+    for (let i = 0; i < times; i += 1) {
+      res += str;
+    }
+  }
+  return res;
 }
 
 /**
