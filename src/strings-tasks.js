@@ -81,7 +81,12 @@ function concatenateStrings(value1, value2) {
  *   getFirstChar('') => ''
  */
 function getFirstChar(value) {
-  return value[0];
+  let res = '';
+  if (value.length > 0) {
+    // eslint-disable-next-line prefer-destructuring
+    res = value[0];
+  }
+  return res;
 }
 
 /**
