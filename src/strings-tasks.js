@@ -42,11 +42,12 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  let res = false;
+  /* let res = false;
   if (typeof value === 'string') {
     res = true;
   }
-  return res;
+  return res; */
+  return typeof value === 'string' || value instanceof String;
 }
 
 /**
