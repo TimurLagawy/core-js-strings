@@ -246,11 +246,12 @@ function sumOfCodes(str) {
  *   startsWith('Hello World', 'Hello') => true
  */
 function startsWith(str, substr) {
-  let res = '';
+  /* let res = '';
   for (let i = 0; i < substr.length; i += 1) {
     res += str[i];
   }
-  return res === substr;
+  return res === substr; */
+  return str.startsWith(substr);
 }
 
 /**
@@ -264,8 +265,18 @@ function startsWith(str, substr) {
  *   endsWith('Hello World', 'World') => true
  *   endsWith('Hello World', 'Hello') => false
  */
-function endsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function endsWith(str, substr) {
+  /* let res = '';
+  let res1 = true;
+  const rev = str.reverse;
+  for (let i = 0; i < substr.length; i += 1) {
+    res += rev[i];
+  }
+  if (substr !== '' && res.reverse !== substr) {
+    res1 = false;
+  }
+  return res1; */
+  return str.endsWith(substr);
 }
 
 /**
