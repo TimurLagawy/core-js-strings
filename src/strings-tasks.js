@@ -154,13 +154,14 @@ function removeTrailingWhitespaces(value) {
  *   repeatString('abc', -2) => ''
  */
 function repeatString(str, times) {
-  let res = '';
+  /* let res = '';
   if (times > 0) {
     for (let i = 0; i < times; i += 1) {
       res += str;
     }
   }
-  return res;
+  return res; */
+  return str.repeat(times);
 }
 
 /**
@@ -291,18 +292,14 @@ function endsWith(str, substr) {
 function formatTime(minutes, seconds) {
   let res = '';
   if (minutes < 10) {
-    res += '0';
-    res += minutes;
-    res += ':';
+    res += `0${minutes}:`;
   } else {
-    res += minutes;
-    res += ':';
+    res += `${minutes}:`;
   }
   if (seconds < 10) {
-    res += '0';
-    res += seconds;
+    res += `0${seconds}`;
   } else {
-    res += seconds;
+    res += `${seconds}`;
   }
   return res;
 }
