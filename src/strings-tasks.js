@@ -366,7 +366,7 @@ function orderAlphabetically(str) {
  *   containsSubstring('12345', '34') => true
  */
 function containsSubstring(str, substring) {
-  let res = '';
+  /* let res = '';
   for (let i = 0; i < str.length; i += 1) {
     for (let l = 0; l < substring.length; l += 1) {
       if (substring[l] === str[i]) {
@@ -374,7 +374,8 @@ function containsSubstring(str, substring) {
       }
     }
   }
-  return res === substring;
+  return res === substring; */
+  return str.includes(substring);
 }
 
 /**
