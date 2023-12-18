@@ -228,7 +228,6 @@ function sumOfCodes(str) {
   let res = 0;
   if (typeof str === 'string' && str.length > 0) {
     for (let i = 0; i < str.length; i += 1) {
-      // eslint-disable-next-line no-undef
       res += str.charCodeAt(i);
     }
   }
@@ -246,8 +245,12 @@ function sumOfCodes(str) {
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
  */
-function startsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function startsWith(str, substr) {
+  let res = '';
+  for (let i = 0; i < substr.length; i += 1) {
+    res += str[i];
+  }
+  return res === substr;
 }
 
 /**
